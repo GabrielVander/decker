@@ -1,6 +1,5 @@
+import 'package:decker/core/config/logger.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/config/logger.dart';
 
 class CounterPage extends StatefulWidget {
   final Logger logger = Logger(name: 'CounterPage');
