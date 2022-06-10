@@ -27,7 +27,8 @@ class Logger {
     logging.Logger.root.onRecord.listen((record) {
       // ignore: avoid_print
       print(
-          '${record.level.name} - ${record.time} - ${record.loggerName}: ${record.message}');
+        '${record.level.name} - ${record.time} - ${record.loggerName}: ${record.message}',
+      );
     });
   }
 }

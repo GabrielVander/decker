@@ -1,7 +1,6 @@
+import 'package:decker/core/config/logger.dart';
+import 'package:decker/decker_app.dart';
 import 'package:flutter/material.dart';
-
-import 'core/config/logger.dart';
-import 'decker_app.dart';
 
 void main() {
   _setUpApplication();

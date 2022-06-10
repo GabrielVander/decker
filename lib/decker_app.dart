@@ -1,6 +1,5 @@
+import 'package:decker/features/default_counter/presentation/pages/counter_page.dart';
 import 'package:flutter/material.dart';
-
-import 'features/default_counter/presentation/pages/counter_page.dart';
 
 class DeckerApp extends StatelessWidget {
   const DeckerApp({Key? key}) : super(key: key);

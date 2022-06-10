@@ -14,7 +14,7 @@ void main() {
         ['Another Message'],
       ]),
       (List<dynamic> values) {
-        final String message = values[0];
+        final String message = values[0] as String;
         final logging.Logger dummyLogger = DummyLogger();
 
         final Logger logger =
@@ -33,7 +33,7 @@ void main() {
         ['Another Message'],
       ]),
       (List<dynamic> values) {
-        final String message = values[0];
+        final String message = values[0] as String;
         final logging.Logger dummyLogger = DummyLogger();
 
         final Logger logger =
@@ -52,7 +52,7 @@ void main() {
         ['Another Message'],
       ]),
       (List<dynamic> values) {
-        final String message = values[0];
+        final String message = values[0] as String;
         final logging.Logger dummyLogger = DummyLogger();
 
         final Logger logger =
