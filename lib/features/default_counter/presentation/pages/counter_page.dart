@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/config/logger.dart';
+
 class CounterPage extends StatefulWidget {
-  const CounterPage({Key? key, required this.title}) : super(key: key);
+  final Logger logger = Logger(name: 'CounterPage');
+
+  CounterPage({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -23,6 +27,7 @@ class _CounterPageState extends State<CounterPage> {
 
   void _incrementCounter() {
     setState(() {
+      widget.logger.debug('Incrementing...');
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed

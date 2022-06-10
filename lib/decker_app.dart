@@ -22,7 +22,7 @@ class DeckerApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const CounterPage(title: 'Flutter Demo Home Page'),
+      home: CounterPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
