@@ -1,4 +1,4 @@
-import 'package:decker/features/default_counter/presentation/pages/counter_page.dart';
+import 'package:decker/core/presentation/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 class DeckerApp extends StatelessWidget {
@@ -21,7 +21,7 @@ class DeckerApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: CounterPage(title: 'Flutter Demo Home Page'),
+      home: const MainPage(),
     );
   }
 }
