@@ -107,7 +107,7 @@ spider:
   # Generates a variable that contains a list of all asset values.
   use_references_list: false
   # Location where all the generated references will be stored
-  package: resources
+  package: core/resources
   groups:
     - path: assets/images
       class_name: Images

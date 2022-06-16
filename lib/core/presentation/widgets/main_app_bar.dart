@@ -1,4 +1,4 @@
-import 'package:decker/resources/resources.dart';
+import 'package:decker/core/resources/resources.dart';
 import 'package:flutter/material.dart';
 
 class DeckerAppBar extends StatelessWidget {
