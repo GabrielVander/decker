@@ -1,3 +1,4 @@
+import 'package:decker/core/presentation/theme/extensions.dart';
 import 'package:decker/core/resources/resources.dart';
 import 'package:flutter/material.dart';
 
@@ -40,9 +41,12 @@ class Title extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final DeckerTextStyle deckerTextStyle =
+        Theme.of(context).extension<DeckerTextStyle>()!;
+
     return Text(
       'Decker',
-      style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 40.0),
+      style: deckerTextStyle.appNameStyle,
     );
   }
 }

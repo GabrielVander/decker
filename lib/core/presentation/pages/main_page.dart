@@ -6,8 +6,9 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double contentPadding = 10.0;
     const double paladinsIconSize = 74.0;
-    const double leadingIconLeftPadding = 10.0;
+    const double leadingIconLeftPadding = contentPadding;
     const double appBarHeight = paladinsIconSize + 20.0;
 
     return Scaffold(
