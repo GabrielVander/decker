@@ -1,3 +1,4 @@
+import 'package:decker/core/presentation/theme/extensions.dart';
 import 'package:decker/core/presentation/widgets/main_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,19 @@ class MainPage extends StatelessWidget {
           paladinsIconSize: paladinsIconSize,
         ),
       ),
-      body: Container(),
+      body: Padding(
+        padding: const EdgeInsets.all(contentPadding),
+        child: Column(
+          children: [
+            Text(
+              'Popular Builds',
+              style: Theme.of(context)
+                  .extension<DeckerTextStyle>()!
+                  .sectionNameStyle,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
