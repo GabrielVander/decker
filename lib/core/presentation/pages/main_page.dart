@@ -24,13 +24,84 @@ class MainPage extends StatelessWidget {
         padding: const EdgeInsets.all(contentPadding),
         child: Column(
           children: [
-            Text(
-              'Popular Builds',
-              style: Theme.of(context)
-                  .extension<DeckerTextStyle>()!
-                  .sectionNameStyle,
+            Row(
+              children: [
+                Text(
+                  'Popular Builds',
+                  style: Theme.of(context)
+                      .extension<DeckerTextStyle>()!
+                      .sectionNameStyle,
+                ),
+              ],
             ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: const [
+                  ToggleablePillButton(
+                    label: 'Today',
+                    toggled: true,
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  ToggleablePillButton(
+                    label: 'This Week',
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  ToggleablePillButton(
+                    label: 'This Month',
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  ToggleablePillButton(
+                    label: 'All Time',
+                  ),
+                ],
+              ),
+            )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class ToggleablePillButton extends StatelessWidget {
+  final bool toggled;
+  final String label;
+
+  const ToggleablePillButton({
+    Key? key,
+    this.toggled = false,
+    required this.label,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final ToggleablePillButtonStyle toggleablePillButtonStyle =
+        Theme.of(context).extension<ToggleablePillButtonStyle>()!;
+
+    return OutlinedButton(
+      onPressed: () {},
+      style: OutlinedButton.styleFrom(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+        ),
+        backgroundColor: toggled ? toggleablePillButtonStyle.fillColor : null,
+        side: BorderSide(
+          color: toggleablePillButtonStyle.outlineColor!,
+        ),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(
+          color: toggled
+              ? toggleablePillButtonStyle.fillTextColor
+              : toggleablePillButtonStyle.outlineColor,
         ),
       ),
     );

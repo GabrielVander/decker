@@ -11,5 +11,10 @@ final ThemeData lightTheme = ThemeData.light().copyWith(
             fontSize: 24,
           ),
     ),
+    const ToggleablePillButtonStyle(
+      outlineColor: Color(0xFF03B5EE),
+      fillTextColor: Colors.white,
+      fillColor: Color(0xFF03B5EE),
+    )
   ],
 );
